@@ -11,13 +11,67 @@
     <link rel="stylesheet" href="css/normalise.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="dark-mode">
+    <main class="main-content">
+        <div class="container">
+            <!-- SITE-HEADER -->
+            <header class="site-header">
+                <a class="site-header-logo" href="index.html">Overreacted</a>
+                <button class="site-header-light" type="button">Light</button>
+                <button class="site-header-dark" type="button">Dark</button>
+            </header>
+            <div class="author">
+                <img class="author-img" src="https://overreacted.io/static/profile-pic-c715447ce38098828758e525a1128b87.jpg" alt="Muallif rasmi"  width="56" height="56">
+                <div class="author-info">
+                    <div class="author-info-text">Personal blog by <a class="author-link" href="https://twitter.com/dan_abramov" target="_blank"> Dan Abramov.</a> <br> I explain with words and code.
+                    </div>
+                </div>
+            </div>
 
-<header></header>
-<main></main>
-<footer></footer>
+            <ul class="articles">
 
-<!-- JS -->
-<script src="js/main.js"></script>
+                <li class="articles-item">
+                    <h2 class="article-title">
+                        <a class="article-link" href="#" target="_blank">npm audit: Broken by Design</a>
+                    </h2>
+                    <small class="article-info">July 7, 2021 • ☕️☕️☕️ 14 min read</small>
+                    <p class="article-text">
+                        Found 99 vulnerabilities (84 moderately irrelevant, 15 highly irrelevant)
+                    </p>
+                </li>
+
+                <li class="articles-item">
+                    <h2 class="article-title">
+                        <a class="article-link" href="#" target="_blank">Before You memo()</a>
+                    </h2>
+                    <small class="article-info">February 23, 2021 • ☕️ 5 min read</small>
+                    <p class="article-text">Rendering optimizations that come naturally.</p>
+                </li>
+
+                <li class="articles-item">
+                    <h2 class="article-title">
+                        <a class="article-link" href="#" target="_blank">The WET Codebase</a>
+                    </h2>
+                    <small class="article-info">July 13, 2020 • ☕️ 1 min read</small>
+                    <p class="article-text">Come waste your time with me.</p>
+                </li>
+
+                <li class="articles-item">
+                    <h2 class="article-title">
+                        <a class="article-link" href="#" target="_blank">Goodbye, Clean Code</a>
+                    </h2>
+                    <small class="article-info">January 11, 2020 • ☕️ 5 min read</small>
+                    <p class="article-text">
+                        Let clean code guide you. Then let it go.
+                    </p>
+                </li>
+
+            </ul>
+        </div>
+    </main>
+    <footer></footer>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
 </body>
 </html>

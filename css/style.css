@@ -1,7 +1,15 @@
 :root{
-    --text-color: '';
-    --primary-color: '';
-    --primary-heading: '';
+    --brand-color: #d23669;
+    --text-color: #222;
+    --bg-color: #fff;
+    --outline-color: var(--brand-color);
+    --font-family-text: "Arial", sans-serif;
+    --font-family-heading: "Palatino Linotype";
+}
+
+.dark-mode{
+    --text-color: #fff;
+    --bg-color: #222;
 }
 
 html{
@@ -10,6 +18,9 @@ html{
     box-sizing: border-box;
 }
 
+a{
+    color: var(--brand-color);
+}
 
 *,
 *::before,
@@ -19,7 +30,7 @@ html{
 
 
 *:focus{
-    outline: '';
+    outline: 2px dashed var(--outline-color);
     outline-offset: 2px;
 }
 
@@ -31,9 +42,11 @@ body{
     margin: 0;
     font-size: 16px;
     line-height: 1.5;
-    font-family: "Arial", sans-serif;
-    background-color: #fff;
-    color: #222;
+    font-family: var(--font-family-text);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
 }
 
 img{
@@ -44,7 +57,7 @@ img{
 /* CONTAINER */
 .container{
     width: 100%;
-    max-width: 1200px;
+    max-width: 700px;
     padding-left: 50px;
     padding-right: 50px;
     margin-left: auto;
@@ -53,13 +66,75 @@ img{
 
 .main-content{
     flex-grow: 1;
+    padding-bottom: 56px;
 }
 
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
+
+/* SITE HEADER */
+.site-header {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.site-header-logo {
+    margin-right: auto;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.site-header-light {
+    margin-right: 12px;
+}
+
+
+/* AUTHOR */
+.author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.author-img {
+    flex-shrink: 0;
+    margin-right: 16px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info {
+    flex-grow: 1;
+}
+
+
+/* ARTICLES */
+.articles {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.articles-item {
+    margin-bottom: 26px;
+}
+
+.article-title {
+    margin: 0;
+}
+
+.article-link{
+    text-decoration: none;
+}
+
+.article-info {
+    margin: 0;
+}
+.article-text {
+    margin: 0;
 }
